@@ -6,17 +6,12 @@ return {
     defaults = {
       { "<leader>b", group = "+buffer" },
       { "<leader>c", group = "+code" },
-      { "<leader>d", group = "+debug" },
       { "<leader>f", group = "+file" },
       { "<leader>g", group = "+goto" },
       { "<leader>h", group = "+help" },
-      { "<leader>k", group = "+k8s" },
       { "<leader>o", group = "+open" },
       { "<leader>q", group = "+quit" },
-      { "<leader>t", group = "+terminal" },
       { "<leader>w", group = "+window" },
-      { "<leader>y", group = "+yank" },
-      { "<leader>z", group = "+chat" },
     },
   },
   config = function(_, opts)
@@ -28,9 +23,8 @@ return {
     { "<leader>/",  "<cmd>Telescope live_grep<cr>", desc = "Search project" },
     --- buffer
     { "<leader>bb", "<cmd>Telescope buffers<cr>",   desc = "Switch Buffer" },
-    { "<leader>bd", "<cmd>Bdelete<cr>",             desc = "Delete Buffer" },
+    { "<leader>bd", "<cmd>bd<cr>",                  desc = "Delete Buffer" },
     { "<leader>bo", "<cmd>%bd|e#<cr>",              desc = "Close other buffers" },
-    { "<leader>bw", "<cmd>Bwipeout<cr>",            desc = "Wipeout Buffer" },
     { "<leader>bx", "<cmd>Scratch<cr>",             desc = "Scratch Buffer" },
     --- code
     { "<leader>ca", vim.lsp.buf.code_action,        desc = "Code Actions" },
@@ -44,11 +38,6 @@ return {
       "<cmd>lua vim.g.cmptoggle = not vim.g.cmptoggle<CR>",
       desc = "LSP Toggle",
     },
-    --- debug
-    { "<leader>db", "<cmd>DapToggleBreakpoint<cr>",    desc = "Toggle breakpoint" },
-    { "<leader>dc", "<cmd>DapContinue<cr>",            desc = "Continue" },
-    { "<leader>dt", "<cmd>DapTerminate<cr>",           desc = "Terminate" },
-    { "<leader>ds", "<cmd>DapStepOver<cr>",            desc = "Step" },
     --- file
     { "<leader>fb", "<cmd>Telescope file_browser<cr>", desc = "File Browser" },
     { "<leader>ff", "<cmd>Telescope find_files<cr>",   desc = "Find File" },
@@ -68,7 +57,6 @@ return {
     { "<leader>gr",    "<cmd>Telescope lsp_references<cr>" },
     { "<leader>gd",    "<cmd>Telescope lsp_definitions<cr>",      desc = "Code Definition" },
     { "<leader>gD",    "<cmd>Telescope lsp_type_definitions<cr>" },
-    { "<leader>gs",    "<cmd>SessionSelect<cr>",                  desc = "Goto Session" },
     { "<leader>gt",    "<cmd>gt<cr>",                             desc = "Goto Next Tabpage" },
     { "<leader>gT",    "<cmd>gT<cr>",                             desc = "Goto Prev Tabpage" },
     { "<leader>g1",    "1gt<cr>",                                 desc = "Goto Tabpage 1" },
@@ -84,23 +72,8 @@ return {
     { "<leader>hh",    "<cmd>Noice history<cr>",                  desc = "history" },
     { "<leader>he",    "<cmd>Noice errors<cr>",                   desc = "errors" },
     { "<leader>hm",    "<cmd>Noice messages<cr>",                 desc = "messages" },
-    --- k8s
-    { "<leader>k9",    "<cmd>OpenK9s<cr>",                        desc = "K9s" },
-    { "<leader>ks",    "<cmd>OpenK9sSplit<cr>",                   desc = "Split view K9s" },
-    { "<leader>kt",    "<cmd>HelmTemplateFromBuffer<cr>",         desc = "Helm template from buffer" },
-    { "<leader>kT",    "<cmd>HelmDryRun<cr>",                     desc = "Helm dry-run buffer" },
     --- open
     { "<leader>op",    "<cmd>NvimTreeToggle<cr>",                 desc = "Nvim Tree" },
-    { "<leader>od",    "<cmd>LazyDocker<cr>",                     desc = "Open LazyDocker" },
-    --{ "<leader>os",    "<cmd>SessionSelect<cr>",                  desc = "Open Session" },
-    { "<leader>ot",    "<cmd>ToggleTerm<cr>",                     desc = "Open Terminal" },
-    --- terminal
-    { "<leader>tv",    "<cmd>ToggleTerm direction=vertical<cr>",  desc = "Vertical Terminal" },
-    { "<leader>ts",    "<cmd>ToggleTerm direction=horizonal<cr>", desc = "Horizontal Terminal" },
-    { "<leader>tt",    "<cmd>ToggleTerm direction=tab<cr>",       desc = "Tab Terminal" },
-    { "<leader>tf",    "<cmd>ToggleTerm direction=float<cr>",     desc = "Float Terminal" },
-    { "<leader>to",    "<cmd>ToggleTermToggleAll<cr>",            desc = "Toggle Terminal" },
-    { "<leader>tb",    "<cmd>term<cr>",            desc = "Toggle Local Buffer Terminal" },
     --- quit
     { "<leader>qq",    "<cmd>qa!<cr>",                            desc = "Quit without saving" },
     --- window
@@ -117,17 +90,7 @@ return {
     { "<leader>wm",    "<C-w>|<C-w>_",                            desc = "Maximize window" },
     { "<leader>wn",    "<cmd>enew<cr>",                           desc = "New buffer in window" },
     { "<leader>wu",    "<C-w>=",                                  desc = "Undo maximize" },
-    { "<leader>ws",    "<cmd>split<cr>",                          desc = "Move window right" },
-    { "<leader>wv",    "<cmd>vsplit<cr>",                         desc = "Move window right" },
-    --- yank
-    --- chat llms
-    { "<leader>zc",    "<cmd>ChatGPT<cr>",                        desc = "Open ChatGPT" },
-    { "<leader>ze",    "<cmd>ChatGPTEditWithInstructions<cr>",    desc = "ChatGPT Edit" },
-
-    { "<leader>zo",    "<cmd>PrtChatNew<cr>",                     desc = "Open Parrot" },
-    { "<leader>z<cr>", "<cmd>PrtChatRespond<cr>",                 desc = "Send command" },
-    { "<leader>zm",    "<cmd>PrtProvider<cr>",                    desc = "Chat provider" },
-    { "<leader>zs",    "<cmd>PrtStop<cr>",                        desc = "Stop response" },
-    { "<leader>zt",    "<cmd>PrtChatToggle tabnew<cr>",           desc = "Toggle Popup" },
+    { "<leader>ws",    "<cmd>split<cr>",                          desc = "Horizontal split" },
+    { "<leader>wv",    "<cmd>vsplit<cr>",                         desc = "Vertical split" },
   },
 }

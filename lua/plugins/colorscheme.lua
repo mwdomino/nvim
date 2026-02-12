@@ -123,21 +123,6 @@ return {
           NeogitDiffDeleteHighlight = { fg = c.black, bg = c.red },
 
           ColorColumn = { bg = c.bg_alt2 },
-
-          BufferLineFill = { bg = c.bg_alt },
-          BufferLineBackground = { bg = c.bg_alt },
-          BufferLineBufferSelected = { bg = c.bg },
-          BufferLineBufferVisible = { bg = c.bg_alt },
-          BufferLineSeparator = { bg = c.bg_alt },
-          BufferLineSeparatorSelected = { bg = c.bg },
-          BufferLineModified = { bg = c.bg_alt },
-          BufferLineModifiedSelected = { bg = c.bg },
-          BufferLineCloseButton = { bg = c.bg_alt },
-          BufferLineCloseButtonSelected = { bg = c.bg },
-          BufferLineTab = { fg = c.gray, bg = c.bg_alt },
-          BufferLineTabSelected = { fg = c.fg, bg = c.bg },
-          BufferLineTabSeparator = { fg = c.purple, bg = c.bg_alt },
-          BufferLineTabSeparatorSelected = { fg = c.purple, bg = c.bg },
         },
       })
 
