@@ -80,14 +80,6 @@ return {
           NvimTreeEmptyFolderName = { fg = c.fg },
           NvimTreeGitFileDirtyHL = { fg = c.purple },
 
-          MiniFilesNormal = { fg = c.fg, bg = c.menu },
-          MiniFilesBorder = { fg = c.purple, bg = c.menu },
-          MiniFilesBorderModified = {},
-          MiniFilesCursorLine = { bg = c.selection },
-          MiniFilesDirectory = { fg = c.white },
-          MiniFilesFile = { fg = c.fg },
-          MiniFilesTitle = { fg = c.yellow },
-          MiniFilesTitleFocused = { fg = c.yellow },
 
           MiniStarterCurrent = { fg = c.fg },
           MiniStarterFooter = { fg = c.black },

@@ -6,24 +6,6 @@ return {
     end,
   },
   {
-    "echasnovski/mini.files",
-    version = "*",
-    dependencies = {
-      "echasnovski/mini.icons",
-    },
-    config = function()
-      require("mini.files").setup({
-        windows = {
-          preview = true,
-        },
-        mappings = {
-          go_in_plus = "<cr>",
-          close = "<esc>",
-        },
-      })
-    end,
-  },
-  {
     "echasnovski/mini.starter",
     config = function()
       local starter = require("mini.starter")

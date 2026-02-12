@@ -90,7 +90,6 @@ return {
     { "<leader>kt",    "<cmd>HelmTemplateFromBuffer<cr>",         desc = "Helm template from buffer" },
     { "<leader>kT",    "<cmd>HelmDryRun<cr>",                     desc = "Helm dry-run buffer" },
     --- open
-    { "<leader>of",    "<cmd>lua MiniFiles.open()<CR>",           desc = "Mini Files" },
     { "<leader>op",    "<cmd>NvimTreeToggle<cr>",                 desc = "Nvim Tree" },
     { "<leader>od",    "<cmd>LazyDocker<cr>",                     desc = "Open LazyDocker" },
     --{ "<leader>os",    "<cmd>SessionSelect<cr>",                  desc = "Open Session" },
