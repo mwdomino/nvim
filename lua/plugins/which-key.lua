@@ -12,7 +12,6 @@ return {
       { "<leader>h", group = "+help" },
       { "<leader>k", group = "+k8s" },
       { "<leader>o", group = "+open" },
-      { "<leader>p", group = "+projects" },
       { "<leader>q", group = "+quit" },
       { "<leader>t", group = "+terminal" },
       { "<leader>w", group = "+window" },
@@ -53,6 +52,7 @@ return {
     --- file
     { "<leader>fb", "<cmd>Telescope file_browser<cr>", desc = "File Browser" },
     { "<leader>ff", "<cmd>Telescope find_files<cr>",   desc = "Find File" },
+    { "<leader>pf", "<cmd>Telescope find_files<cr>",   desc = "Find File" },
     { "<leader>fg", "<cmd>Telescope live_grep<cr>",    desc = "Live Grep" },
     { "<leader>fr", "<cmd>Telescope oldfiles<cr>",     desc = "Recent Files" },
     { "<leader>fn", "<cmd>ene <BAR> startinsert <cr>", desc = "New File" },
@@ -101,11 +101,6 @@ return {
     { "<leader>tf",    "<cmd>ToggleTerm direction=float<cr>",     desc = "Float Terminal" },
     { "<leader>to",    "<cmd>ToggleTermToggleAll<cr>",            desc = "Toggle Terminal" },
     { "<leader>tb",    "<cmd>term<cr>",            desc = "Toggle Local Buffer Terminal" },
-    --- projects
-    { "<leader>pa",    "<cmd>ProjectileAdd<cr>",                  desc = "Add Project" },
-    { "<leader>pd",    "<cmd>ProjectileDelete<cr>",               desc = "Delete Project" },
-    { "<leader>pp",    "<cmd>Telescope projectile<cr>",           desc = "Projects" },
-    --{ "<leader>ps",    "<cmd>SessionSelect<cr>",                  desc = "Sessions" },
     --- quit
     { "<leader>qq",    "<cmd>qa!<cr>",                            desc = "Quit without saving" },
     --- window
