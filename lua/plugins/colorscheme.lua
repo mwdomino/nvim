@@ -12,7 +12,7 @@ return {
         bg_alt2 = "#2D2F3D",
         menu = has_truecolor and "#1E2029" or "#1C1C1C",
         visual = "#3E4452",
-        comment = "#565761",
+        comment = "#93949A",
         selection = "#292A36",
         orange = "#FDC38E",
         black = "#1C1C1C",
