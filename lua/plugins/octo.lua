@@ -6,6 +6,7 @@ return {
     picker = "telescope",
     -- bare Octo command opens picker of commands
     enable_builtin = true,
+    use_local_fs = false,
   },
   keys = {
     {
@@ -34,6 +35,11 @@ return {
         require("octo.utils").create_base_search_command { include_current_repo = true }
       end,
       desc = "Search GitHub",
+    },
+    {
+      "<leader>goc",
+      "<CMD>Octo<CR>",
+      desc = "Octo command picker",
     },
   },
   dependencies = {
