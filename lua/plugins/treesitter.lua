@@ -1,19 +1,25 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
+    branch = "main",
+    lazy = false,
     build = ":TSUpdate",
     config = function()
-      local config = require("nvim-treesitter.configs")
-      config.setup({
-        ensure_installed = {
-          "markdown",
-          "markdown_inline",
-        },
-        auto_install = true,
-        highlight = { enable = true },
-        indent = { enable = true },
-      })
-    end
-  }
-}
+      -- Add the runtime/ subdirectory to rtp so neovim finds queries
+      local ts_path = vim.fn.stdpath("data") .. "/lazy/nvim-treesitter"
+      vim.opt.rtp:append(ts_path .. "/runtime")
 
+      require("nvim-treesitter").setup({
+        auto_install = true,
+      })
+
+      -- Enable treesitter highlighting for all filetypes with a parser
+      vim.api.nvim_create_autocmd("FileType", {
+        callback = function()
+          pcall(vim.treesitter.start)
+        end,
+      })
+
+    end,
+  },
+}
