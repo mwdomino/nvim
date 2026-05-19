@@ -88,6 +88,12 @@ return {
       })
       vim.lsp.enable('html')
 
+      vim.lsp.config('cue', {
+        on_attach = require("lsp-format").on_attach,
+        capabilities = capabilities
+      })
+      vim.lsp.enable('cue')
+
       vim.lsp.config('lua_ls', {
         on_attach = require("lsp-format").on_attach,
         capabilities = capabilities,
