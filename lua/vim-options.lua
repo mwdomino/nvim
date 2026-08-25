@@ -30,6 +30,10 @@ vim.opt.colorcolumn = "80,120"
 
 vim.hl = vim.highlight
 
+-- Over SSH there is no local clipboard tool; yank through OSC 52 instead.
+-- Must be set explicitly: nvim skips its own OSC 52 fallback when 'clipboard' is set.
+if vim.env.SSH_TTY then vim.g.clipboard = 'osc52' end
+
 -- Set clipboard to system clipboard
 if vim.fn.system('uname -s'):match('Darwin') then
   vim.opt.clipboard = 'unnamed'     -- macOS
