@@ -94,6 +94,11 @@ return {
       })
       vim.lsp.enable('cue')
 
+      vim.lsp.config('ruff', {
+        capabilities = capabilities
+      })
+      vim.lsp.enable('ruff')
+
       vim.lsp.config('lua_ls', {
         on_attach = require("lsp-format").on_attach,
         capabilities = capabilities,
